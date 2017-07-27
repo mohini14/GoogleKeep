@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
+		
+		setNavigationBar()
 		return true
 	}
 
@@ -88,6 +90,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	        }
 	    }
 	}
-
+	
+	func setNavigationBar(){
+		
+		let navigationBarAppearace = UINavigationBar.appearance()
+		navigationBarAppearace.tintColor = UIColor.white
+		navigationBarAppearace.barTintColor = UIColor.black
+	}
 }
 

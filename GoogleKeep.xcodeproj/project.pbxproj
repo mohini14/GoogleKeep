@@ -13,7 +13,12 @@
 		15C9BDEA1F29BDC5007D9BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C9BDE21F29BDC5007D9BCD /* Assets.xcassets */; };
 		15C9BDEC1F29BDC5007D9BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C9BDE51F29BDC5007D9BCD /* LaunchScreen.storyboard */; };
 		15C9BDED1F29BDC5007D9BCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C9BDE61F29BDC5007D9BCD /* Main.storyboard */; };
-		15C9BDFB1F29C231007D9BCD /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C9BDFA1F29C231007D9BCD /* SWRevealViewController.m */; };
+		15C9BDFD1F29C9F9007D9BCD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9BDFC1F29C9F9007D9BCD /* MenuViewController.swift */; };
+		15C9BDFF1F29CEFA007D9BCD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9BDFE1F29CEFA007D9BCD /* HomeViewController.swift */; };
+		15C9BE011F29D1DD007D9BCD /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9BE001F29D1DD007D9BCD /* Utility.swift */; };
+		15C9BE0B1F29D323007D9BCD /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C9BE0A1F29D323007D9BCD /* SWRevealViewController.m */; };
+		15C9BE141F29F06B007D9BCD /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9BE131F29F06B007D9BCD /* Define.swift */; };
+		15C9BE161F2A0045007D9BCD /* SlideBarButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 15C9BE151F2A0045007D9BCD /* SlideBarButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,9 +31,14 @@
 		15C9BDE31F29BDC5007D9BCD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15C9BDE51F29BDC5007D9BCD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15C9BDE61F29BDC5007D9BCD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		15C9BDF81F29C231007D9BCD /* GoogleKeep-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleKeep-Bridging-Header.h"; sourceTree = "<group>"; };
-		15C9BDF91F29C231007D9BCD /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		15C9BDFA1F29C231007D9BCD /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		15C9BDFC1F29C9F9007D9BCD /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		15C9BDFE1F29CEFA007D9BCD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		15C9BE001F29D1DD007D9BCD /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		15C9BE091F29D323007D9BCD /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		15C9BE0A1F29D323007D9BCD /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		15C9BE111F29EC58007D9BCD /* GoogleKeep-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleKeep-Bridging-Header.h"; sourceTree = "<group>"; };
+		15C9BE131F29F06B007D9BCD /* Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
+		15C9BE151F2A0045007D9BCD /* SlideBarButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SlideBarButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +92,6 @@
 		15C9BDD91F29BDC5007D9BCD /* AppDelegates */ = {
 			isa = PBXGroup;
 			children = (
-				15C9BDF41F29C17E007D9BCD /* New Group */,
 				15C9BDDA1F29BDC5007D9BCD /* AppDelegate.swift */,
 			);
 			path = AppDelegates;
@@ -92,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				15C9BDDC1F29BDC5007D9BCD /* ViewController.swift */,
+				15C9BDFC1F29C9F9007D9BCD /* MenuViewController.swift */,
+				15C9BDFE1F29CEFA007D9BCD /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -107,6 +118,7 @@
 		15C9BDE01F29BDC5007D9BCD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				15C9BE121F29F02A007D9BCD /* Images */,
 				15C9BDE11F29BDC5007D9BCD /* Others */,
 				15C9BDE41F29BDC5007D9BCD /* StoryBoards */,
 			);
@@ -131,29 +143,32 @@
 			path = StoryBoards;
 			sourceTree = "<group>";
 		};
-		15C9BDF41F29C17E007D9BCD /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
-			sourceTree = "<group>";
-		};
 		15C9BDF61F29C1A5007D9BCD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				15C9BDF71F29C1CF007D9BCD /* ThirdPartyLibrary */,
+				15C9BE081F29D323007D9BCD /* ThirdPartyLibrary */,
+				15C9BE001F29D1DD007D9BCD /* Utility.swift */,
+				15C9BE111F29EC58007D9BCD /* GoogleKeep-Bridging-Header.h */,
+				15C9BE131F29F06B007D9BCD /* Define.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		15C9BDF71F29C1CF007D9BCD /* ThirdPartyLibrary */ = {
+		15C9BE081F29D323007D9BCD /* ThirdPartyLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				15C9BDF91F29C231007D9BCD /* SWRevealViewController.h */,
-				15C9BDFA1F29C231007D9BCD /* SWRevealViewController.m */,
-				15C9BDF81F29C231007D9BCD /* GoogleKeep-Bridging-Header.h */,
+				15C9BE091F29D323007D9BCD /* SWRevealViewController.h */,
+				15C9BE0A1F29D323007D9BCD /* SWRevealViewController.m */,
 			);
-			name = ThirdPartyLibrary;
+			path = ThirdPartyLibrary;
+			sourceTree = "<group>";
+		};
+		15C9BE121F29F02A007D9BCD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				15C9BE151F2A0045007D9BCD /* SlideBarButton.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +235,7 @@
 				15C9BDEC1F29BDC5007D9BCD /* LaunchScreen.storyboard in Resources */,
 				15C9BDEA1F29BDC5007D9BCD /* Assets.xcassets in Resources */,
 				15C9BDED1F29BDC5007D9BCD /* Main.storyboard in Resources */,
+				15C9BE161F2A0045007D9BCD /* SlideBarButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,10 +246,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15C9BE0B1F29D323007D9BCD /* SWRevealViewController.m in Sources */,
+				15C9BE011F29D1DD007D9BCD /* Utility.swift in Sources */,
+				15C9BE141F29F06B007D9BCD /* Define.swift in Sources */,
 				15C9BDE81F29BDC5007D9BCD /* ViewController.swift in Sources */,
+				15C9BDFD1F29C9F9007D9BCD /* MenuViewController.swift in Sources */,
 				15C9BDE91F29BDC5007D9BCD /* GoogleKeep.xcdatamodeld in Sources */,
 				15C9BDE71F29BDC5007D9BCD /* AppDelegate.swift in Sources */,
-				15C9BDFB1F29C231007D9BCD /* SWRevealViewController.m in Sources */,
+				15C9BDFF1F29CEFA007D9BCD /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +305,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleKeep-Bridging-Header.h \n";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -326,6 +347,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleKeep-Bridging-Header.h \n";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};

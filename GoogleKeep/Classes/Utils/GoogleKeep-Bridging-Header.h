@@ -1,4 +1,14 @@
 //
-//  Use this file to import your target's public headers that you would like to expose to Swift.
+//  GoogleKeep-Bridging-Header.h
+//  GoogleKeep
+//
+//  Created by Mohini Sindhu  on 27/07/17.
+//  Copyright © 2017 Mohini Sindhu . All rights reserved.
 //
 
+#ifndef GoogleKeep_Bridging_Header_h
+#define GoogleKeep_Bridging_Header_h
+
+#import "SWRevealViewController.h"
+
+#endif /* GoogleKeep_Bridging_Header_h */
