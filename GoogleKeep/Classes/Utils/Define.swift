@@ -20,6 +20,8 @@ struct Define
 		static let kIntTwoConst  = 2
 	}
 	
-	struct ColorConstants {
+	struct ColorConstants
+	{
+		static let kNavigationBarColor = UIColor(red: 238/255, green: 186/255, blue: 44/255, alpha: 1)
 	}
 }

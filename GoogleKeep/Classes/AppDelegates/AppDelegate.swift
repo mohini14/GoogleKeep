@@ -94,8 +94,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func setNavigationBar(){
 		
 		let navigationBarAppearace = UINavigationBar.appearance()
-		navigationBarAppearace.tintColor = UIColor.white
-		navigationBarAppearace.barTintColor = UIColor.black
+		navigationBarAppearace.tintColor = UIColor.darkGray
+		navigationBarAppearace.barTintColor = Define.ColorConstants.kNavigationBarColor
 	}
 }
 
