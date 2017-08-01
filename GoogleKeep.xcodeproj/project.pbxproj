@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		159B99291F30554A007C8088 /* NotesImages.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 159B99281F30554A007C8088 /* NotesImages.jpg */; };
+		159B992B1F305625007C8088 /* GirlImage'.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 159B992A1F305625007C8088 /* GirlImage'.jpeg */; };
+		159B99341F3082C1007C8088 /* NotesCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 159B99331F3082C1007C8088 /* NotesCollectionCell.xib */; };
+		159B99381F3083B8007C8088 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159B99371F3083B8007C8088 /* MenuTableViewCell.swift */; };
+		159B993B1F3083F1007C8088 /* NotesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159B993A1F3083F1007C8088 /* NotesCollectionCell.swift */; };
 		15C9BDE71F29BDC5007D9BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9BDDA1F29BDC5007D9BCD /* AppDelegate.swift */; };
 		15C9BDE81F29BDC5007D9BCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9BDDC1F29BDC5007D9BCD /* ViewController.swift */; };
 		15C9BDE91F29BDC5007D9BCD /* GoogleKeep.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15C9BDDE1F29BDC5007D9BCD /* GoogleKeep.xcdatamodeld */; };
@@ -22,8 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		159B99281F30554A007C8088 /* NotesImages.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = NotesImages.jpg; path = Others/Images/NotesImages.jpg; sourceTree = "<group>"; };
+		159B992A1F305625007C8088 /* GirlImage'.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "GirlImage'.jpeg"; sourceTree = "<group>"; };
+		159B99331F3082C1007C8088 /* NotesCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesCollectionCell.xib; sourceTree = "<group>"; };
+		159B99371F3083B8007C8088 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		159B993A1F3083F1007C8088 /* NotesCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesCollectionCell.swift; sourceTree = "<group>"; };
 		15C9BDC01F29BC3C007D9BCD /* GoogleKeep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleKeep.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		15C9BDCB1F29BC3C007D9BCD /* GoogleKeep.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoogleKeep.xcdatamodel; sourceTree = "<group>"; };
 		15C9BDDA1F29BDC5007D9BCD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15C9BDDC1F29BDC5007D9BCD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		15C9BDDF1F29BDC5007D9BCD /* GoogleKeep.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoogleKeep.xcdatamodel; sourceTree = "<group>"; };
@@ -52,6 +61,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		159B99301F308275007C8088 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				159B99331F3082C1007C8088 /* NotesCollectionCell.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		159B99361F3083B8007C8088 /* TableCellParentClass */ = {
+			isa = PBXGroup;
+			children = (
+				159B99371F3083B8007C8088 /* MenuTableViewCell.swift */,
+			);
+			path = TableCellParentClass;
+			sourceTree = "<group>";
+		};
+		159B99391F3083DD007C8088 /* CollectionCellParentClass */ = {
+			isa = PBXGroup;
+			children = (
+				159B993A1F3083F1007C8088 /* NotesCollectionCell.swift */,
+			);
+			path = CollectionCellParentClass;
+			sourceTree = "<group>";
+		};
 		15C9BDB71F29BC3A007D9BCD = {
 			isa = PBXGroup;
 			children = (
@@ -74,7 +107,6 @@
 				15C9BDD81F29BDC5007D9BCD /* Classes */,
 				15C9BDDD1F29BDC5007D9BCD /* Database */,
 				15C9BDE01F29BDC5007D9BCD /* Resources */,
-				15C9BDCA1F29BC3C007D9BCD /* GoogleKeep.xcdatamodeld */,
 			);
 			path = GoogleKeep;
 			sourceTree = "<group>";
@@ -82,6 +114,8 @@
 		15C9BDD81F29BDC5007D9BCD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				159B99391F3083DD007C8088 /* CollectionCellParentClass */,
+				159B99361F3083B8007C8088 /* TableCellParentClass */,
 				15C9BDF61F29C1A5007D9BCD /* Utils */,
 				15C9BDD91F29BDC5007D9BCD /* AppDelegates */,
 				15C9BDDB1F29BDC5007D9BCD /* ViewControllers */,
@@ -118,6 +152,7 @@
 		15C9BDE01F29BDC5007D9BCD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				159B99301F308275007C8088 /* XIB */,
 				15C9BE121F29F02A007D9BCD /* Images */,
 				15C9BDE11F29BDC5007D9BCD /* Others */,
 				15C9BDE41F29BDC5007D9BCD /* StoryBoards */,
@@ -166,6 +201,8 @@
 		15C9BE121F29F02A007D9BCD /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				159B992A1F305625007C8088 /* GirlImage'.jpeg */,
+				159B99281F30554A007C8088 /* NotesImages.jpg */,
 				15C9BE151F2A0045007D9BCD /* SlideBarButton.png */,
 			);
 			name = Images;
@@ -232,6 +269,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				159B99291F30554A007C8088 /* NotesImages.jpg in Resources */,
+				159B99341F3082C1007C8088 /* NotesCollectionCell.xib in Resources */,
+				159B992B1F305625007C8088 /* GirlImage'.jpeg in Resources */,
 				15C9BDEC1F29BDC5007D9BCD /* LaunchScreen.storyboard in Resources */,
 				15C9BDEA1F29BDC5007D9BCD /* Assets.xcassets in Resources */,
 				15C9BDED1F29BDC5007D9BCD /* Main.storyboard in Resources */,
@@ -251,7 +291,9 @@
 				15C9BE141F29F06B007D9BCD /* Define.swift in Sources */,
 				15C9BDE81F29BDC5007D9BCD /* ViewController.swift in Sources */,
 				15C9BDFD1F29C9F9007D9BCD /* MenuViewController.swift in Sources */,
+				159B99381F3083B8007C8088 /* MenuTableViewCell.swift in Sources */,
 				15C9BDE91F29BDC5007D9BCD /* GoogleKeep.xcdatamodeld in Sources */,
+				159B993B1F3083F1007C8088 /* NotesCollectionCell.swift in Sources */,
 				15C9BDE71F29BDC5007D9BCD /* AppDelegate.swift in Sources */,
 				15C9BDFF1F29CEFA007D9BCD /* HomeViewController.swift in Sources */,
 			);
@@ -408,16 +450,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		15C9BDCA1F29BC3C007D9BCD /* GoogleKeep.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				15C9BDCB1F29BC3C007D9BCD /* GoogleKeep.xcdatamodel */,
-			);
-			currentVersion = 15C9BDCB1F29BC3C007D9BCD /* GoogleKeep.xcdatamodel */;
-			path = GoogleKeep.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		15C9BDDE1F29BDC5007D9BCD /* GoogleKeep.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
