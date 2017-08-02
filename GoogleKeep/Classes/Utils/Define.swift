@@ -36,9 +36,22 @@ struct Define
 	struct XIBNames{
 		
 		static let kNotesCollectionCellNIB = "NotesCollectionCell"
+		static let kAddNewNoteViewNIB   =   "AddNewNoteView"
 	}
 	struct SegueIdentifiers
     {
 		static let kMenuVCToHomeVC = "MenuVCToHOmeVC"
+	}
+	
+	struct CoreDataEntitynames{
+		
+		static let kNoteEntity = "Note"
+	}
+	
+	struct NoteEntityAttributeNames {
+		
+		static let kNoteHeadingAttribute = "noteHeading"
+		static let kNoteDescriptionAttribute = "noteDescription"
+		static let kNoteDateAttribuet = "noteDate"
 	}
 }

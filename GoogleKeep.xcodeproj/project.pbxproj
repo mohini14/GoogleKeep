@@ -24,6 +24,9 @@
 		15C9BE0B1F29D323007D9BCD /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C9BE0A1F29D323007D9BCD /* SWRevealViewController.m */; };
 		15C9BE141F29F06B007D9BCD /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9BE131F29F06B007D9BCD /* Define.swift */; };
 		15C9BE161F2A0045007D9BCD /* SlideBarButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 15C9BE151F2A0045007D9BCD /* SlideBarButton.png */; };
+		15DEFB2A1F31A1180077CC51 /* AddNewNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15DEFB291F31A1180077CC51 /* AddNewNoteView.xib */; };
+		15DEFB2D1F31A33C0077CC51 /* AddNewNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DEFB2C1F31A33C0077CC51 /* AddNewNoteView.swift */; };
+		15DEFB301F31ADD40077CC51 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DEFB2F1F31ADD40077CC51 /* CoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		15C9BE111F29EC58007D9BCD /* GoogleKeep-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleKeep-Bridging-Header.h"; sourceTree = "<group>"; };
 		15C9BE131F29F06B007D9BCD /* Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		15C9BE151F2A0045007D9BCD /* SlideBarButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SlideBarButton.png; sourceTree = "<group>"; };
+		15DEFB291F31A1180077CC51 /* AddNewNoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNewNoteView.xib; sourceTree = "<group>"; };
+		15DEFB2C1F31A33C0077CC51 /* AddNewNoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewNoteView.swift; sourceTree = "<group>"; };
+		15DEFB2F1F31ADD40077CC51 /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				159B99331F3082C1007C8088 /* NotesCollectionCell.xib */,
+				15DEFB291F31A1180077CC51 /* AddNewNoteView.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -114,6 +121,8 @@
 		15C9BDD81F29BDC5007D9BCD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				15DEFB2E1F31ADB20077CC51 /* Model */,
+				15DEFB2B1F31A2FF0077CC51 /* ViewParentClasses */,
 				159B99391F3083DD007C8088 /* CollectionCellParentClass */,
 				159B99361F3083B8007C8088 /* TableCellParentClass */,
 				15C9BDF61F29C1A5007D9BCD /* Utils */,
@@ -208,6 +217,22 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		15DEFB2B1F31A2FF0077CC51 /* ViewParentClasses */ = {
+			isa = PBXGroup;
+			children = (
+				15DEFB2C1F31A33C0077CC51 /* AddNewNoteView.swift */,
+			);
+			name = ViewParentClasses;
+			sourceTree = "<group>";
+		};
+		15DEFB2E1F31ADB20077CC51 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15DEFB2F1F31ADD40077CC51 /* CoreData.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,6 +301,7 @@
 				15C9BDEA1F29BDC5007D9BCD /* Assets.xcassets in Resources */,
 				15C9BDED1F29BDC5007D9BCD /* Main.storyboard in Resources */,
 				15C9BE161F2A0045007D9BCD /* SlideBarButton.png in Resources */,
+				15DEFB2A1F31A1180077CC51 /* AddNewNoteView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,9 +316,11 @@
 				15C9BE011F29D1DD007D9BCD /* Utility.swift in Sources */,
 				15C9BE141F29F06B007D9BCD /* Define.swift in Sources */,
 				15C9BDE81F29BDC5007D9BCD /* ViewController.swift in Sources */,
+				15DEFB301F31ADD40077CC51 /* CoreData.swift in Sources */,
 				15C9BDFD1F29C9F9007D9BCD /* MenuViewController.swift in Sources */,
 				159B99381F3083B8007C8088 /* MenuTableViewCell.swift in Sources */,
 				15C9BDE91F29BDC5007D9BCD /* GoogleKeep.xcdatamodeld in Sources */,
+				15DEFB2D1F31A33C0077CC51 /* AddNewNoteView.swift in Sources */,
 				159B993B1F3083F1007C8088 /* NotesCollectionCell.swift in Sources */,
 				15C9BDE71F29BDC5007D9BCD /* AppDelegate.swift in Sources */,
 				15C9BDFF1F29CEFA007D9BCD /* HomeViewController.swift in Sources */,

@@ -14,8 +14,9 @@ let kViewShadowRadius  = Int(1)
 let kViewShadowOffsetWidth = Int(-1)
 let kViewShadowOffsethieght = Int(1)
 let kviewShadowSize = CGFloat(5.0)
+//let kSubViewTopConstartintValue = CGFloat(64.0)
 
-class HomeViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+class HomeViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
 
 	//MARK: IBOutlets
 	@IBOutlet weak var notesCollectionView : UICollectionView!
@@ -24,6 +25,7 @@ class HomeViewController: UIViewController,UICollectionViewDelegate,UICollection
 	
 	//MARK: Private Oulets
 	var notesArray : Array<Note>?
+	var CellHieght : CGFloat?
 	
 	
 	//MARK: View life cycle methods
@@ -47,7 +49,19 @@ class HomeViewController: UIViewController,UICollectionViewDelegate,UICollection
 
 		addToggleButton()
 		InitialDeclarations()
+		populateData()
 		dropShadow(scale: true)
+		addRefreshControlToCollectionView()
+	}
+	
+	func populateData(){
+		
+		self.notesArray = CoreData.fetchAllNotes()
+		
+		if (notesArray?.count)! > 0 {
+		self.notesCollectionView.reloadData()
+		}
+		self.notesCollectionView.refreshControl?.endRefreshing()
 	}
 	
 	func addToggleButton(){
@@ -76,8 +90,10 @@ class HomeViewController: UIViewController,UICollectionViewDelegate,UICollection
 		let nib = UINib(nibName: Define.XIBNames.kNotesCollectionCellNIB, bundle: nil)
 		self.notesCollectionView?.register(nib, forCellWithReuseIdentifier:Define.CellIdentifireConstant.kNoteCollectionCellIdentifier)
 	}
-	func onPressingRightBarButtonForAddingNote(){
-		
+	func addRefreshControlToCollectionView(){
+		self.notesCollectionView.refreshControl = UIRefreshControl()
+		self.notesCollectionView.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
+		self.notesCollectionView.refreshControl?.addTarget(self, action: #selector(self.populateData), for: UIControlEvents.valueChanged)
 	}
 	
 	//MARK: Collection view Data Source
@@ -90,7 +106,47 @@ class HomeViewController: UIViewController,UICollectionViewDelegate,UICollection
 		
 		cell = collectionView.dequeueReusableCell(withReuseIdentifier: Define.CellIdentifireConstant.kNoteCollectionCellIdentifier, for: indexPath) as! NotesCollectionCell
 		
-		cell.setUpCellAttributes((self.notesArray?[indexPath.row])!)
+		
+		cell.setUpCellAttributes((self.notesArray?[indexPath.row])!, withCompletionHandler: {
+			(height) in
+			
+			self.CellHieght = height
+		}
+		)
+		
+	
 		return cell
+	}
+	
+//	//Use for size
+//	func collectionView(_ collectionView: UICollectionView,
+//	                    layout collectionViewLayout: UICollectionViewLayout,
+//	                    sizeForItemAt indexPath: IndexPath) -> CGSize {
+////		if let cellHt = self.CellHieght
+////		{
+////		return  CGSize(width: self.view.frame.size.width, height: cellHt + 20.0)
+////		}
+//		return CGSize (width: self.view.frame.size.width , height: 150.0)
+//	}
+//
+
+	//MARK: Actions on VC
+	@IBAction func addNewNoteButtonPressed(_ sender: Any) {
+		
+		let subView = Bundle.main.loadNibNamed(Define.XIBNames.kAddNewNoteViewNIB, owner: nil, options: nil)?.first as! AddNewNoteView
+		
+		let rect = CGRect(origin: CGPoint(x: 0,y :(self.navigationController?.navigationBar.frame.size.height)! + 10.0), size: CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height))
+		subView.frame = rect
+		self.view.addSubview(subView)
+		
+		subView.onFetchingNewNote = {
+			(newNote : Note) -> Void in
+			
+			if !((newNote.noteDescription?.isEmpty)!){
+				
+				CoreData.saveANewNote(newNote)
+			}
+		}
+		
 	}
 }
